@@ -3,11 +3,6 @@
 pragma solidity 0.8.20;
 
 contract Token {
-    // Define the name of token, symbol and total Suppply
-    // define the owner of the token
-    // see balance, transfer, approve, transfer from, allowance.
-
-    // Define Variables
     address public owner;
     string public name;
     string public symbol;
