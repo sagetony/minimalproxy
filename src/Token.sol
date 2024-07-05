@@ -104,14 +104,12 @@ contract Proxy {
             mstore(clone, 0x3d602d80600a3d3981f3)
             mstore(add(clone, 0x14), targetBytes)
             mstore(add(clone, 0x28), 0x5af43d82803e903d91602b57fd5bf3)
-            instance := create(0, clone, 0x37)
+            // instance := create(0, clone, 0x37)
         }
-        require(instance != address(0), "ERC1167: create failed");
+        // require(instance != address(0), "ERC1167: create failed");
 
-        // Call the initializer function on the new instance
-        (bool success, ) = instance.call(initData);
-        require(success, "Initialization failed");
-
-        emit ProxyCreated(instance);
+        // // Call the initializer function on the new instance
+        // (bool success, ) = instance.call(initData);
+        // require(success, "Initialization failed");
     }
 }
